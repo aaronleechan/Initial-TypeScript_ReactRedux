@@ -29,7 +29,6 @@ const initialState: RecorderState = {
 const recorderReducer = (
     state: RecorderState = initialState, 
     action: StartAction | StopAction ) =>{
-    console.log("This is action type ", action.type)
     switch(action.type){
         case START:
             return {...state, dateStart: new Date().toISOString()}
